@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<title>Pike Admin - Free Bootstrap 4 Admin Template</title>
+		<meta name="description" content="Free Bootstrap 4 Admin Theme | Pike Admin">
+		
+		
+		
+		<!--加上这个css，底部就乱套了-->
+		<link rel="stylesheet" href="assets/css/coming-soon.css">	
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="assets/images/favicon.ico">
+
+		<!-- Bootstrap CSS -->
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- Font Awesome CSS -->
+		<link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- Custom CSS -->
+		<link href="assets/css/style.css" rel="stylesheet" type="text/css" />		
+		
+		<!-- BEGIN CSS for this page -->
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css"/>
+
+
+		<!-- END CSS for this page -->
+
+</head>
+
+<body class="adminbody">
+		
+<div id="main">
+<!-- top bar navigation -->
+	<div class="headerbar">
+
+		<!-- LOGO -->
+        <div class="headerbar-left">
+			<a href="home.html" class="logo"><img alt="Logo" src="assets/images/logo.png" /> <span>个人文献管理</span></a>
+        </div>
+
+        <nav class="navbar-custom">
+
+                    <ul class="list-inline float-right mb-0">
+						
+						<li class="list-inline-item dropdown notif">
+                            <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <i class="fa fa-fw fa-question-circle"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-arrow-success dropdown-lg">
+                                <!-- item-->
+                                <div class="dropdown-item noti-title">
+                                    <h5><small>帮助</small></h5>
+                                </div>
+
+                                <!-- item-->
+                                <a target="_blank" href="#" class="dropdown-item notify-item">                                    
+                                    <p class="notify-details ml-0">
+                                        <b>对操作网站的疑惑？</b>
+                                        <span>挑战帮助文档</span>
+                                    </p>
+                                </a>
+
+                                <!-- item-->
+                                <a target="_blank" href="#" class="dropdown-item notify-item">                                    
+                                    <p class="notify-details ml-0">
+                                        <b>对制作人的疑惑？</b>
+                                        <span>跳转制作人简历</span>
+                                    </p>
+                                </a>                               
+
+                                <!-- All-->
+                                <a title="Clcik to visit Pike Admin Website" target="_blank" href="#" class="dropdown-item notify-item notify-all">
+                                    <i class="fa fa-link"></i> 访问山东师范大学信工学院主页
+                                </a>
+
+                            </div>
+                        </li>
+						
+                        <li class="list-inline-item dropdown notif">
+                            <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <i class="fa fa-fw fa-envelope-o"></i><span class="notif-bullet"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-arrow-success dropdown-lg">
+                                <!-- item-->
+                                <div class="dropdown-item noti-title">
+                                    <h5><small><span class="label label-danger pull-xs-right">12</span>Contact Messages</small></h5>
+                                </div>
+
+                                <!-- item-->
+                                <a href="#" class="dropdown-item notify-item">                                    
+                                    <p class="notify-details ml-0">
+                                        <b>Jokn Doe</b>
+                                        <span>New message received</span>
+                                        <small class="text-muted">2 minutes ago</small>
+                                    </p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="#" class="dropdown-item notify-item">                                    
+                                    <p class="notify-details ml-0">
+                                        <b>Michael Jackson</b>
+                                        <span>New message received</span>
+                                        <small class="text-muted">15 minutes ago</small>
+                                    </p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="#" class="dropdown-item notify-item">                                    
+                                    <p class="notify-details ml-0">
+                                        <b>Foxy Johnes</b>
+                                        <span>New message received</span>
+                                        <small class="text-muted">Yesterday, 13:30</small>
+                                    </p>
+                                </a>
+
+                                <!-- All-->
+                                <a href="#" class="dropdown-item notify-item notify-all">
+                                    View All
+                                </a>
+
+                            </div>
+                        </li>
+                        
+						<li class="list-inline-item dropdown notif">
+                            <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <i class="fa fa-fw fa-bell-o"></i><span class="notif-bullet"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-lg">
+								<!-- item-->
+                                <div class="dropdown-item noti-title">
+                                    <h5><small><span class="label label-danger pull-xs-right">5</span>Allerts</small></h5>
+                                </div>
+								
+                                <!-- item-->
+                                <a href="#" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-faded">
+                                        <img src="assets/images/avatars/avatar2.png" alt="img" class="rounded-circle img-fluid">
+                                    </div>
+                                    <p class="notify-details">
+                                        <b>John Doe</b>
+                                        <span>User registration</span>
+                                        <small class="text-muted">3 minutes ago</small>
+                                    </p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="#" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-faded">
+                                        <img src="assets/images/avatars/avatar3.png" alt="img" class="rounded-circle img-fluid">
+                                    </div>
+                                    <p class="notify-details">
+                                        <b>Michael Cox</b>
+                                        <span>Task 2 completed</span>
+                                        <small class="text-muted">12 minutes ago</small>
+                                    </p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="#" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-faded">
+                                        <img src="assets/images/avatars/avatar4.png" alt="img" class="rounded-circle img-fluid">
+                                    </div>
+                                    <p class="notify-details">
+                                        <b>Michelle Dolores</b>
+                                        <span>New job completed</span>
+                                        <small class="text-muted">35 minutes ago</small>
+                                    </p>
+                                </a>
+
+                                <!-- All-->
+                                <a href="#" class="dropdown-item notify-item notify-all">
+                                    View All Allerts
+                                </a>
+
+                            </div>
+                        </li>
+
+                        <li class="list-inline-item dropdown notif">
+                            <a class="nav-link dropdown-toggle nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <img src="assets/images/avatars/admin.png" alt="Profile image" class="avatar-rounded">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                                <!-- item-->
+                                <div class="dropdown-item noti-title">
+                                    <h5 class="text-overflow"><small>你好, 李小二</small> </h5>
+                                </div>
+
+                                <!-- item-->
+                                <a href="pro-profile.html" class="dropdown-item notify-item">
+                                    <i class="fa fa-user"></i> <span>个人中心</span>
+                                </a>
+
+                                <!-- item-->
+                                <a href="login.html" class="dropdown-item notify-item">
+                                    <i class="fa fa-power-off"></i> <span>注销</span>
+                                </a>
+								
+								<!-- item-->
+                                <a target="_blank" href="#" class="dropdown-item notify-item">
+                                    <i class="fa fa-external-link"></i> <span>推荐网站</span>
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <ul class="list-inline menu-left mb-0">
+                        <li class="float-left">
+                            <button class="button-menu-mobile open-left">
+								<i class="fa fa-fw fa-bars"></i>
+                            </button>
+                        </li>                        
+                    </ul>
+
+        </nav>
+
+	</div>
+	<!-- End Navigation -->
+	
+ 
+	<!-- Left Sidebar -->
+	<div class="left main-sidebar">
+	
+		<div class="sidebar-inner leftscroll">
+
+			<div id="sidebar-menu">
+        
+			<ul>
+				
+					
+					<li class="submenu">
+                        <a class="active" href="#"><i class="fa fa-fw fa-file-text-o"></i> <span> 文献中心 </span> <span class="menu-arrow"></span></a>
+							<ul class="list-unstyled">
+								<li><a href="addfile.html">新增</a></li>
+								<li  class="active"><a href="#">查找</a></li>
+							</ul>
+                    </li>
+					<li class="submenu">
+                        <a  href="#"><i class="fa fa-fw fa-user-circle-o"></i> <span> 个人中心 </span> <span class="menu-arrow"></span></a>
+                            <ul>
+								<li ><a href="home.html">个人分析</a></li>
+                               <li><a href="pro-profile.html">我的资料</a></li>
+                                <li class="submenu">
+                                    <a href="#"><span>安全中心</span> <span class="menu-arrow"></span> </a>
+                                        <ul style="">
+                                            <li><a href="upd_pwd.html">修改密码</a></li>
+											<li><a href="upd_phonenum.html">换绑手机号</a></li>
+                                        </ul>
+                                </li>                                
+                            </ul>
+                    </li>
+
+					<li class="submenu">
+                        <a class="pro" href="fileview.html"><i class="fa fa-fw fa-puzzle-piece"></i> <span>文献导图</span> </a>
+							
+                    </li>
+										
+                  </ul>
+
+     
+
+			</div>
+        
+		
+
+		</div>
+
+	</div>
+	<!-- End Sidebar -->
+
+
+    <div class="content-page">
+	
+		<!-- Start content -->
+        <div class="content">
+            
+			<div class="container-fluid">
+
+					
+							
+				<div class="row">
+						<div class="col-xl-12">
+								<div class="breadcrumb-holder">
+										<h1 class="main-title float-left">查找文献</h1>
+										<ol class="breadcrumb float-right">
+											<li class="breadcrumb-item">Home</li>
+											<li class="breadcrumb-item active">查找文献</li>
+										</ol>
+										<div class="clearfix"></div>
+								</div>
+						</div>
+				</div>
+				<!-- end row -->
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">	
+						<div class="fullwidth colour2 clearfix">
+								<div id="maincont" class="bodycontainer clearfix">
+
+									<form enctype="multipart/form-data" method="post" id="needform" name="needform">
+
+										<!--左边-->
+										<div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+											<div class="form-row">
+												<div class="form-group col-md-8">
+													<label for="docname">文献标题</label>
+													<input type="text" id="docname" name="docname" value="" class="form-control"  placeholder="文献标题" autocomplete="off">
+												</div>
+
+												<div class="form-group col-md-4">
+													<div class="dropdown custom1 " >
+														<button type="button" class="btn " data-toggle="dropdown">
+															<em name="tagname">请选择</em>
+															<input type="hidden" name="tag.tagid" id="tagid" value="0">
+															<i class="caret"></i>
+														</button>
+														<ul class="dropdown-menu" id="tagul">
+															<li >
+																<input class="form-control seach_name" placeholder="请输入搜索内容">
+																<i class="glyphicon glyphicon-search"></i>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label for="keyword">文献关键字</label>
+												<input type="text" id="keyword" name="keyword" value="" class="form-control"  placeholder="多个关键字之间用；（英文；）隔开" autocomplete="off">
+											</div>
+										</div>
+
+
+
+										<!--右边-->
+										<div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+
+											<div class="form-group">
+												<label for="authorname">作者</label>
+												<input type="text" id="authorname" name="authorname" value="" class="form-control"  placeholder="多个作者之间用；（英文；）隔开">
+											</div>
+
+
+											<div class="form-row">
+												<div class="form-group col-md-6">
+													<label for="periname">出版物名称</label>
+													<input type="text" id="periname" name="periname" value="" class="form-control" placeholder="出版物名称">
+												</div>
+												<div class="form-group col-md-6">
+													<label for="publictime">发表时间</label>
+													<input type="text" id="publictime" name="publictime" value="" class="form-control"  placeholder="">
+												</div>
+											</div>
+
+										</div>
+
+
+
+
+
+
+										<!--	没对齐-->
+										<div class="form-group">
+
+											<button type="button" class="btn btn-primary" onClick="findDocByNeedTwo()">搜索</button>
+											<!--<button type="submit" class="btn btn-primary" >搜索</button>-->
+										</div>
+
+									</form>
+
+
+								</div>
+							</div>
+					</div>
+				</div>
+
+
+				
+
+
+
+
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">						
+						<div class="card mb-3">
+							<div class="card-header">
+								<h3><i class="fa fa-table"></i> 查找结果</h3>
+						         所有符合条件d的结果都在这里啦
+							</div>
+
+							<div class="card-body">
+
+								<div class="table-responsive">
+
+
+
+
+                                    <table id="example4" class="table table-bordered table-hover display">
+                                        <thead>
+                                        <tr>
+                                            <th>标题</th>
+                                            <th>作者</th>
+                                            <th>发布时间</th>
+                                            <th>关键词</th>
+                                            <th>id</th>
+                                            <th>remind</th>
+                                            <th>path</th>
+                                            <th>操作</th>
+                                        </tr>
+                                        </thead>
+
+                                    </table>
+
+
+								</div>
+
+							</div>							
+						</div><!-- end card-->					
+					</div>
+				</div>			
+			
+
+
+            </div>
+			<!-- END container-fluid -->
+
+		</div>
+		<!-- END content -->
+
+    </div>
+	<!-- END content-page -->
+    
+
+
+<footer class="footer"> <span class="text-right"> Copyright <a target="_blank" href="#">Jingxi Fang</a> </span> <span class="float-right"> 个人文献管理系统 <a href="#" target="_blank" title="毕业设计">山东师范大学</a> - 信息科学与工程学院 <a href="#" title="毕业设计" target="_blank">2020</a> </span> </footer>
+<!-- END main -->
+</div>
+<script src="assets/js/modernizr.min.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/moment.min.js"></script>
+
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<script src="assets/js/detect.js"></script>
+<script src="assets/js/fastclick.js"></script>
+<script src="assets/js/jquery.blockUI.js"></script>
+<script src="assets/js/jquery.nicescroll.js"></script>
+
+<!-- App js -->
+<script src="assets/js/pikeadmin.js"></script>
+
+<!-- BEGIN Java Script for 表格 -->
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+<script>
+
+
+
+</script>
+<!-- END Java Script for 表格-->
+<!-- BEGIN Java Script for sweetalert-->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+
+    //取消稍后再看
+    $(document).on('click','.fa-bell-slash',function(){
+        alert("remindflag1");
+        //设置falg为1 取消稍后再看
+        var id=	$(this).attr("title");
+        $.ajax({
+            url:"doc/updatedocforflag",
+            //contentType:"application/json;charset=UTF-8",
+            data:{"docid":id,"flag":1},
+            dataType:"json",
+            type:"post",
+            success:function(data){
+                //alert(data.msg);
+                if("success"==data.msg){
+                    //刷新列表
+                    var datatable = $("#example4").dataTable();
+                    if (datatable) {
+                        datatable.fnClearTable();    //清空数据
+                        datatable.fnDestroy();         //销毁datatable
+                    }
+                    findDocByNeedTwo();
+                    //提示删除成功
+                    swal("成功取消稍后再看", {
+                        icon: "success",
+                    });
+                }
+                else {
+                    //提示删除失败
+                    swal("系统异常", {
+                        icon: "success",
+                    });
+                }
+
+            }
+        });
+
+
+    });
+
+    $(document).on('click','.fa-bell',function(){
+        alert("remindflag0");
+        //设置falg为0  设置为稍后再看
+        var id=	$(this).attr("title");
+        $.ajax({
+            url:"doc/updatedocforflag",
+            //contentType:"application/json;charset=UTF-8",
+            data:{"docid":id,"flag":0},
+            dataType:"json",
+            type:"post",
+            success:function(data){
+                //alert(data.msg);
+                if("success"==data.msg){
+                    //刷新列表
+                    var datatable = $("#example4").dataTable();
+                    if (datatable) {
+                        datatable.fnClearTable();    //清空数据
+                        datatable.fnDestroy();         //销毁datatable
+                    }
+                    findDocByNeedTwo();
+                    //提示删除成功
+                    swal("成功设置为稍后再看", {
+                        icon: "success",
+                    });
+                }
+                else {
+                    //提示删除失败
+                    swal("系统异常", {
+                        icon: "success",
+                    });
+                }
+
+            }
+        });
+
+
+
+    });
+
+    $(document).on('click','.fa-cloud-download',function(){
+        alert("download");
+        var filepath=	$(this).attr("title");
+
+        window.location.href=filepath;
+        //wal("下载成功");
+    });
+    $(document).on('click','.fa-trash-o',function(){
+
+        var titleStr=$(this).attr("title");
+        var titleArr=titleStr.split("|");
+        var id=titleArr[0];
+        var docname=titleArr[1];
+        alert(id+docname);
+        swal({
+            title: "确定吗?",
+            text: "你确定要删除文献《"+docname+"》吗？（删除后无法恢复）",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((willDelete) => {
+            if (willDelete) {
+                //异步删除
+                deletedocbydocid(id);
+            } else {
+                swal("文献没有被删除!");
+    }
+    });
+    });
+
+    /**
+     * 异步删除
+     * @param id
+     */
+    function  deletedocbydocid(id) {
+        alert(id);
+        $.ajax({
+            url:"doc/deletedocbydocid",
+            //contentType:"application/json;charset=UTF-8",
+            data:{"docid":id},
+            dataType:"json",
+            type:"post",
+            success:function(data){
+                //alert(data.msg);
+                if("success"==data.msg){
+                    //刷新列表
+                    findDocByNeed();
+                    //提示删除成功
+                    swal("成功删除了", {
+                        icon: "success",
+                    });
+                }
+                else {
+                    //提示删除失败
+                    swal("删除失败了", {
+                        icon: "success",
+                    });
+                }
+
+            }
+        });
+    }
+
+
+
+</script>
+<!-- END Java Script for sweetalert -->
+
+
+<!-- END Java Script for sweetalert -->
+<!--下拉框开始-->
+<script src="assets/js/index.js"></script>
+
+
+	<script>
+
+        /**
+		 * 获取标签标号
+         * @param id
+         */
+        function clickTag(id) {
+            document.getElementById("tagid").value=id;
+        }
+
+		//异步查询该用户创建的所有的标签
+		function findTagByUserId(){
+
+			$.ajax({
+				url:"tag/findtagbyuserid",
+				contentType:"application/json;charset=UTF-8",
+				//注意data的格式
+				//dataType:"json",
+				type:"post",
+				success:function(data){
+
+					var ul=document.getElementById("tagul");
+					$.each(data, function(index, item) {
+						//遍历taglist
+						//alert(item.tagname);
+						var liObj=document.createElement("li");
+						liObj.innerHTML="<a href='javascript:clickTag("+item.id+")' style='color:#000000 '>"+item.tagname+"</a>";
+						ul.appendChild(liObj);
+					});
+				}
+			});
+		}
+		$(document).ready(function () {
+
+			findTagByUserId();
+            //new一个实例
+            new DropdownSearch('.custom1');
+		});
+	</script>
+<!--下拉框结束-->
+
+<script>
+
+    /**
+     * 查找符合条件的文献
+     */
+    function findDocByNeedTwo() {
+
+        alert("find");
+
+        $.ajax({
+            url:"doc/finddocbyuserneed",
+            data:$("form").serialize(),
+            dataType:"json",
+            type:"post",
+            success:function(result){
+
+                var dataSet=[];
+
+                $.each(result, function(index, item) {
+                    var data=[item.docname, item.authorname,item.keyword,item.publictime,item.docid,item.remindflag,item.filepath];
+                    dataSet.push(data);
+                });
+
+
+                // Setup - add a text input to each footer cell
+
+                $("#example4").DataTable( {
+                    data: dataSet,
+                    searching: false,
+                    columnDefs: [
+                            {
+                                // targets用于指定操作的列，从第0列开始，-1为最后一列，这里第六列
+                                // return后边是我们希望在指定列填入的按钮代码
+                                targets: -1,
+                                bSortable: false,
+                                render: function ( data, type, full, meta ) {
+                                    var trStr="<a class=\"btn btn-primary btn-sm\" href=\"pdf_view.html?docid="+full[4]+"\" \"><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i></a>" +
+                                    "<a class=\"btn btn-danger btn-sm\"  ><i class=\"fa fa-trash-o\" title=\""+full[4]+"|"+full[0]+"\" aria-hidden=\"true\"></i></a>" +
+                                        "<a class=\"btn btn-success btn-sm\" ><i class=\"fa fa-cloud-download\" title=\""+full[6]+"\"   aria-hidden=\"true\" ></i></a>";
+                                    if(full[5]==0){
+                                        //0代表设置了没有看
+                                        trStr+="<a class=\"btn btn-warning btn-sm\" ><i class=\"fa fa-bell-slash\"aria-hidden=\"true\" title=\""+full[4]+"\"></i></a>";
+                                    }
+                                    else{
+                                        //其他情况
+                                        trStr+="<a class=\"btn btn-warning btn-sm\" ><i class=\"fa fa-bell\"aria-hidden=\"true\" title=\""+full[4]+"\" ></i></a>";
+                                    }
+                                    return trStr;
+
+                                }
+                            }
+                        ],
+                        aoColumns: [
+                            null,
+                            null,
+                            null,
+                            null,
+                            {bVisible: false, bSortable: false,},
+                            {bVisible: false, bSortable: false,},
+                            {bVisible: false, bSortable: false,},
+                            null
+                        ]
+
+                    } );
+            }
+        });
+    }
+
+</script>
+
+</body>
+</html>

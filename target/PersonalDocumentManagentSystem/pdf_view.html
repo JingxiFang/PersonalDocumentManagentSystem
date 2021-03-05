@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<title>个人文献管理系统</title>
+		<meta name="description" content="Free Bootstrap 4 Admin Theme | Pike Admin">
+		
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="assets/images/favicon.ico">
+
+		<!-- Switchery css -->
+		<link href="assets/plugins/switchery/switchery.min.css" rel="stylesheet" />
+		
+		<!-- Bootstrap CSS -->
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- Font Awesome CSS -->
+		<link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- Custom CSS -->
+		<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+
+		<!-- Modernizr -->
+		<script src="assets/js/modernizr.min.js"></script>
+
+		<!-- jQuery -->
+		<script src="assets/js/jquery.min.js"></script>
+
+		<!-- Moment -->
+		<script src="assets/js/moment.min.js"></script>
+		
+		<!-- BEGIN CSS for this page -->
+
+        <!-- BEGIN CSS for 时间选择器 -->
+        <script src="assets/js/modernizr.min.js"></script>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/moment.min.js"></script>
+
+        <link href="assets/plugins/datetimepicker/css/daterangepicker.css" rel="stylesheet" />
+        <!-- END CSS for 时间选择器 -->
+
+		<link href="assets/plugins/summernote/dist/summernote.min.css" rel="stylesheet">
+		<!-- END CSS for this page -->
+				
+</head>
+
+<body class="adminbody">
+
+<div id="main">
+
+	<!-- top bar navigation -->
+	<div class="headerbar">
+
+		<!-- LOGO -->
+        <div class="headerbar-left">
+			<a href="home.html" class="logo"><img alt="Logo" src="assets/images/logo.png" /> <span>个人文献管理</span></a>
+        </div>
+
+        <nav class="navbar-custom">
+
+                    <ul class="list-inline float-right mb-0">
+						
+						<li class="list-inline-item dropdown notif">
+                            <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <i class="fa fa-fw fa-question-circle"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-arrow-success dropdown-lg">
+                                <!-- item-->
+                                <div class="dropdown-item noti-title">
+                                    <h5><small>帮助</small></h5>
+                                </div>
+
+                                <!-- item-->
+                                <a target="_blank" href="#" class="dropdown-item notify-item">                                    
+                                    <p class="notify-details ml-0">
+                                        <b>对操作网站的疑惑？</b>
+                                        <span>挑战帮助文档</span>
+                                    </p>
+                                </a>
+
+                                <!-- item-->
+                                <a target="_blank" href="#" class="dropdown-item notify-item">                                    
+                                    <p class="notify-details ml-0">
+                                        <b>对制作人的疑惑？</b>
+                                        <span>跳转制作人简历</span>
+                                    </p>
+                                </a>                               
+
+                                <!-- All-->
+                                <a title="Clcik to visit Pike Admin Website" target="_blank" href="#" class="dropdown-item notify-item notify-all">
+                                    <i class="fa fa-link"></i> 访问山东师范大学信工学院主页
+                                </a>
+
+                            </div>
+                        </li>
+						
+                        <li class="list-inline-item dropdown notif">
+                            <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <i class="fa fa-fw fa-envelope-o"></i><span class="notif-bullet"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-arrow-success dropdown-lg">
+                                <!-- item-->
+                                <div class="dropdown-item noti-title">
+                                    <h5><small><span class="label label-danger pull-xs-right">12</span>Contact Messages</small></h5>
+                                </div>
+
+                                <!-- item-->
+                                <a href="#" class="dropdown-item notify-item">                                    
+                                    <p class="notify-details ml-0">
+                                        <b>Jokn Doe</b>
+                                        <span>New message received</span>
+                                        <small class="text-muted">2 minutes ago</small>
+                                    </p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="#" class="dropdown-item notify-item">                                    
+                                    <p class="notify-details ml-0">
+                                        <b>Michael Jackson</b>
+                                        <span>New message received</span>
+                                        <small class="text-muted">15 minutes ago</small>
+                                    </p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="#" class="dropdown-item notify-item">                                    
+                                    <p class="notify-details ml-0">
+                                        <b>Foxy Johnes</b>
+                                        <span>New message received</span>
+                                        <small class="text-muted">Yesterday, 13:30</small>
+                                    </p>
+                                </a>
+
+                                <!-- All-->
+                                <a href="#" class="dropdown-item notify-item notify-all">
+                                    View All
+                                </a>
+
+                            </div>
+                        </li>
+                        
+						<li class="list-inline-item dropdown notif">
+                            <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <i class="fa fa-fw fa-bell-o"></i><span class="notif-bullet"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-lg">
+								<!-- item-->
+                                <div class="dropdown-item noti-title">
+                                    <h5><small><span class="label label-danger pull-xs-right">5</span>Allerts</small></h5>
+                                </div>
+								
+                                <!-- item-->
+                                <a href="#" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-faded">
+                                        <img src="assets/images/avatars/avatar2.png" alt="img" class="rounded-circle img-fluid">
+                                    </div>
+                                    <p class="notify-details">
+                                        <b>John Doe</b>
+                                        <span>User registration</span>
+                                        <small class="text-muted">3 minutes ago</small>
+                                    </p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="#" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-faded">
+                                        <img src="assets/images/avatars/avatar3.png" alt="img" class="rounded-circle img-fluid">
+                                    </div>
+                                    <p class="notify-details">
+                                        <b>Michael Cox</b>
+                                        <span>Task 2 completed</span>
+                                        <small class="text-muted">12 minutes ago</small>
+                                    </p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="#" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-faded">
+                                        <img src="assets/images/avatars/avatar4.png" alt="img" class="rounded-circle img-fluid">
+                                    </div>
+                                    <p class="notify-details">
+                                        <b>Michelle Dolores</b>
+                                        <span>New job completed</span>
+                                        <small class="text-muted">35 minutes ago</small>
+                                    </p>
+                                </a>
+
+                                <!-- All-->
+                                <a href="#" class="dropdown-item notify-item notify-all">
+                                    View All Allerts
+                                </a>
+
+                            </div>
+                        </li>
+
+                        <li class="list-inline-item dropdown notif">
+                            <a class="nav-link dropdown-toggle nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <img src="assets/images/avatars/admin.png" alt="Profile image" class="avatar-rounded">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                                <!-- item-->
+                                <div class="dropdown-item noti-title">
+                                    <h5 class="text-overflow"><small>你好, 李小二</small> </h5>
+                                </div>
+
+                                <!-- item-->
+                                <a href="pro-profile.html" class="dropdown-item notify-item">
+                                    <i class="fa fa-user"></i> <span>个人中心</span>
+                                </a>
+
+                                <!-- item-->
+                                <a href="login.html" class="dropdown-item notify-item">
+                                    <i class="fa fa-power-off"></i> <span>注销</span>
+                                </a>
+								
+								<!-- item-->
+                                <a target="_blank" href="#" class="dropdown-item notify-item">
+                                    <i class="fa fa-external-link"></i> <span>推荐网站</span>
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <ul class="list-inline menu-left mb-0">
+                        <li class="float-left">
+                            <button class="button-menu-mobile open-left">
+								<i class="fa fa-fw fa-bars"></i>
+                            </button>
+                        </li>                        
+                    </ul>
+
+        </nav>
+
+	</div>
+	<!-- End Navigation -->
+	
+ 
+	<!-- Left Sidebar -->
+	<div class="left main-sidebar">
+	
+		<div class="sidebar-inner leftscroll">
+
+			<div id="sidebar-menu">
+        
+			<ul>
+				
+					
+					<li class="submenu">
+                        <a class="active" href="#"><i class="fa fa-fw fa-file-text-o"></i> <span> 文献中心 </span> <span class="menu-arrow"></span></a>
+							<ul class="list-unstyled">
+								<li ><a href="addfile.html">新增</a></li>
+								<li class="active"><a href="searchfile.html">查找</a></li>
+							</ul>
+                    </li>
+					<li class="submenu">
+                        <a  href="#"><i class="fa fa-fw fa-user-circle-o"></i> <span> 个人中心 </span> <span class="menu-arrow"></span></a>
+                            <ul>
+								<li ><a href="home.html">个人分析</a></li>
+                               <li><a href="pro-profile.html">我的资料</a></li>
+                                <li class="submenu">
+                                    <a href="#"><span>安全中心</span> <span class="menu-arrow"></span> </a>
+                                        <ul style="">
+                                            <li><a href="upd_pwd.html">修改密码</a></li>
+											<li><a href="upd_phonenum.html">换绑手机号</a></li>
+                                        </ul>
+                                </li>                                
+                            </ul>
+                    </li>
+
+					<li class="submenu">
+                        <a class="pro" href="fileview.html"><i class="fa fa-fw fa-puzzle-piece"></i> <span>文献导图</span> </a>
+							
+                    </li>
+										
+                  </ul>
+
+     
+
+			</div>
+        
+		
+
+		</div>
+
+	</div>
+	<!-- End Sidebar -->
+
+
+    <div class="content-page">
+	
+		<!-- Start content -->
+        <div class="content">
+            
+			<div class="container-fluid">
+
+					
+			<div class="row">
+					<div class="col-xl-12">
+							<div class="breadcrumb-holder">
+                                    <h1 class="main-title float-left">文献阅览</h1>
+                                    <ol class="breadcrumb float-right">
+										<li class="breadcrumb-item">文献中心</li>
+										<li class="breadcrumb-item">查找文献</li>
+										<li class="breadcrumb-item active">文献阅览</li>
+                                    </ol>
+                                    <div class="clearfix"></div>
+                            </div>
+                            <div class="breadcrumb-holder float-right">
+                            <button type="button" onclick="updateDocInfo()"  class="btn btn-primary">修改</button>
+                                <button  id="btnFlag"  type="button" onclick="setFlag()" title="" class="btn btn-primary">设置为稍后再看</button>
+
+                             <div class="clearfix"></div>
+                        </div>
+					</div>
+			</div>
+            <!-- end row -->
+
+                <form method="post" name="updatefrom" id="updatefrom" enctype="multipart/form-data">
+
+
+				   <div class="row">
+
+					   <div id="viewdiv" class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+						<embed id="pdfview" src="pdftest/test.pdf" type="application/pdf" width="100%" height="100%"> </embed>
+					    </div>
+
+                       <div class="form-group col-xl-4 col-md-4 col-sm-12 border-left">
+                           <div class="form-group">
+                               <label>文献名称：</label>
+                               <input class="form-control" name="docname" id="docname" type="text" required>
+                           </div>
+
+                           <div class="form-group">
+                               <label>作者：</label>
+                               <input class="form-control" name="authorname" id="authorname" type="text"  placeholder="多个作者使用;隔开" required>
+                           </div>
+
+                           <div class="form-group">
+                               <label>发布时间：</label>
+                               <input type="text" class="form-control" name="publictime"  id="publictime"/>
+
+                               <script>
+                                   $(function() {
+                                       $('input[name="publictime"]').daterangepicker({
+                                           singleDatePicker: true,
+                                           showDropdowns: true,
+                                           locale: {
+                                               format: "YYYY-MM-DD",
+                                               separator: " - ",
+                                               daysOfWeek: ["日","一","二","三","四","五","六"],
+                                               monthNames: ["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"]
+                                           }
+
+                                       });
+                                   });
+                               </script>
+                           </div>
+                           <div class="form-group">
+                               <label for="periname">刊物</label>
+                               <input type="text" class="form-control" id="periname" name="periname">
+                           </div>
+
+                           <div class="form-group">
+                               <label >标签</label>
+                               <div class="dropdown custom1 " >
+                                   <button type="button" class="btn " data-toggle="dropdown">
+                                       <em name="tag.tagname" id="tag.tagname">请选择</em>
+                                       <input type="hidden" name="tag.tagid" id="tagid" >
+                                       <i class="caret"></i>
+                                   </button>
+                                   <ul class="dropdown-menu" id="tagul">
+                                       <li >
+                                           <input class="form-control seach_name" placeholder="请输入搜索内容">
+                                           <i class="glyphicon glyphicon-search"></i>
+                                       </li>
+                                   </ul>
+                               </div>
+
+                               <input type="text"  class="col-lg-8" id="tagname" name="tagname" />
+                               <button type="button" onclick="savetag()"  class="btn btn-primary">添加</button>
+
+                           </div>
+                           <div class="form-group">
+                               <label>关键字</label>
+                               <input class="form-control" name="keyword" id="keyword" type="text"  placeholder="多个关键字使用;隔开" required>
+
+
+                           </div>
+
+
+
+                       </div>
+
+
+                   </div>
+                   <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">						
+						
+						<div id="summernote" class="summernote" width="100%" height="400px">这里用来写笔记，此区域可拖动变大</div>				
+
+										
+                    </div>  
+                    </div>
+					
+                </form>
+
+</div>
+
+
+            </div>
+			<!-- END container-fluid -->
+
+		</div>
+		<!-- END content -->
+
+    </div>
+	<!-- END content-page -->
+    
+	<footer class="footer"> 
+	<span class="text-right"> Copyright <a target="_blank" href="#">Jingxi Fang</a> </span> 
+	<span class="float-right"> 个人文献管理系统 
+	<a href="#" target="_blank" title="毕业设计">山东师范大学</a> - 信息科学与工程学院 
+	<a href="#" title="毕业设计" target="_blank">2020</a> 
+	</span> 
+</footer>
+
+</div>
+<!-- END main -->
+
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<script src="assets/js/detect.js"></script>
+<script src="assets/js/fastclick.js"></script>
+<script src="assets/js/jquery.blockUI.js"></script>
+<script src="assets/js/jquery.nicescroll.js"></script>
+<script src="assets/js/jquery.scrollTo.min.js"></script>
+<script src="assets/plugins/switchery/switchery.min.js"></script>
+
+<!-- App js -->
+<script src="assets/js/pikeadmin.js"></script>
+
+<!-- BEGIN Java Script for this page -->
+
+<script src="assets/plugins/summernote/dist/summernote.min.js"></script>
+
+<script>
+      $('#summernote').summernote({
+        placeholder: 'Hello Bootstrap 4',
+        tabsize: 2,
+        height: 100
+      });
+    </script>
+
+
+<!-- BEGIN Java Script for 时间选择器 -->
+<script src="assets/plugins/datetimepicker/js/moment.min.js"></script>
+<script src="assets/plugins/datetimepicker/js/daterangepicker.js"></script>
+<!-- END Java Script for 时间选择器 -->
+
+
+<!--BEGIN Java script FOR 下拉选择框 -->
+<script src="assets/js/index.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    function clickTag(id) {
+        document.getElementById("tagid").value=id;
+    }
+    //异步查询该用户创建的所有的标签
+    function findTagByUserId(){
+
+        $.ajax({
+            url:"tag/findtagbyuserid",
+            //contentType:"application/json;charset=UTF-8",
+            //注意data的格式
+            dataType:"json",
+            type:"post",
+            success:function(data){
+                var ul=document.getElementById("tagul");
+                $.each(data, function(index, item) {
+                    //遍历taglist
+                    var liObj=document.createElement("li");
+                    liObj.innerHTML="<a href='javascript:clickTag("+item.id+")' style='color:black'>"+item.tagname+"</a>";
+                    ul.appendChild(liObj);
+                });
+            }
+        });
+    }
+
+    $(document).ready(function () {
+        //docinfo
+        var id=findParme();
+        findDocByDocId(id);
+        //tag
+        new DropdownSearch('.custom1');
+        findTagByUserId();
+    });
+
+
+    /**
+     *获取url后的参数
+     * */
+     function findParme() {
+        //alert("findParme");
+       var url = location.search; //获取url中"?"符后的字串
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            var requestDocId=strs[0].split("=");
+           // alert(requestDocId[1]);
+            var id=requestDocId[1];
+            return id;
+        }
+        return null;
+    }
+
+    /**
+     * 获取并且填充本页内容
+     * @param id
+     */
+    function findDocByDocId(id) {
+       // alert("findDocByDocId");
+        $.ajax({
+            url:"doc/finddocbydocid",
+            //contentType:"application/json;charset=UTF-8",
+            data:{"docid":id},
+            dataType:"json",
+            type:"post",
+            success:function(data){
+                //alert(data);
+                //把文件属性放到每个位置
+                document.getElementById("docname").value=data.docname;
+                document.getElementById("authorname").value=data.authorname;
+                document.getElementById("periname").value=data.periname;
+                document.getElementById("publictime").value=data.publictime;
+                document.getElementById("keyword").value=data.keyword;
+                document.getElementById("viewdiv").innerHTML="";
+                document.getElementById("viewdiv").innerHTML="<embed id=\"pdfview\" src=\""+data.filepath+"\" type=\"application/pdf\" width=\"100%\" height=\"100%\"> </embed>";
+                $('#summernote').summernote("code",data.note);
+                //取值var summernote = $("#summernote").summernote("code");
+                document.getElementById("tag.tagname").innerText=data.tag.tagname;
+                document.getElementById("tagid").value=data.tag.tagid;
+                document.getElementById("btnFlag").title=data.remindflag;
+
+            }
+        });
+    }
+
+
+
+    //异步增加一个新的标签
+    function savetag() {
+
+        //获取标签名称
+        var tagname=document.getElementById("tagname").value;
+        //alert(tagname);
+
+        $.ajax({
+            url:"tag/savetag",
+            //contentType:"application/json;charset=UTF-8",
+            //注意data的格式
+            data:{'tagname': tagname},
+            dataType:"text",
+            type:"post",
+            success:function(data){
+                if(data=="success"){
+                    alert("添加成功");
+                    findTagByUserId();
+                }
+            },
+            error:function (data) {
+                alert("添加失败")
+            }
+        })
+    }
+
+
+    /**
+     * 修改文献信息
+     */
+    function updateDocInfo() {
+        alert("updateDocInfo");
+
+        //获取文献编号
+        var docid=findParme();
+        var docname = document.getElementById("docname").value;
+        var authorname=document.getElementById("authorname").value;
+        var periname=document.getElementById("periname").value;
+        var publictime=document.getElementById("publictime").value;
+        var keyword=document.getElementById("keyword").value;
+        var note = $("#summernote").summernote("code");
+        var tagid=document.getElementById("tagid").value;
+
+        //alert(docname+note);
+        $.ajax({
+            url:"doc/updatedocinfo",
+            data:{
+                "docid":docid,
+                "docname":docname,
+                "authorname":authorname,
+                "periname":periname,
+                "publictime":publictime,
+                "keyword":keyword,
+                "note":note,
+                "tag.tagid":tagid
+            },
+            dataType:"json",
+            type:"post",
+            success:function(result){
+                if(result.msg=="success")
+                swal("修改成功");
+            }
+        });
+    }
+
+</script>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+
+    function setFlag(){
+        var flag=document.getElementById("btnFlag").title;
+        var docid= findParme();
+        if(flag==0){
+            flag=1;
+        }
+        else {
+            flag=0;
+        }
+        $.ajax({
+            url:"doc/updatedocforflag",
+            data:{"docid":docid,"flag":flag},
+            dataType:"json",
+            type:"post",
+            success:function(data){
+                //alert(data.msg);
+                if("success"==data.msg){
+                    if(flag==0){
+                        //提示成功
+                        swal("成功设置为稍后再看，请记得阅览", {
+                            icon: "success",
+                        });
+
+                        //修改图标 fa-bell-slash
+
+
+
+                    }else{
+                        //提示成功
+                        swal("成功取消稍后再看", {
+                            icon: "success",
+                        });
+                        //修改图标//fa-bell
+
+
+                    }
+
+                    //修改title
+                    document.getElementById("btnFlag").title=flag;
+                }
+                else {
+                    //提示
+                    swal("系统异常", {
+                        icon: "success",
+                    });
+                }
+            }
+        });
+    }
+
+
+</script>
+
+<!-- END Java Script for this page -->
+
+</body>
+</html>

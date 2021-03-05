@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<title>Pike Admin - Free Bootstrap 4 Admin Template</title>
+		<meta name="description" content="Free Bootstrap 4 Admin Theme | Pike Admin">
+		
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="assets/images/favicon.ico">
+
+		<!-- Switchery css -->
+		<link href="assets/plugins/switchery/switchery.min.css" rel="stylesheet" />
+		
+		<!-- Bootstrap CSS -->
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- Font Awesome CSS -->
+		<link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- Custom CSS -->
+		<link href="assets/css/style.css" rel="stylesheet" type="text/css" />	
+		
+		<!-- BEGIN CSS for this page -->
+
+		<!-- END CSS for this page -->
+				
+</head>
+
+<body class="adminbody">
+
+<div id="main">
+
+	<div class="row justify-content-center mt-5">
+		 
+			 
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">						
+						<div class="card mb-3">
+							<div class="card-header" style="background-color: #4980b5">
+							
+								<h2><i class="fa fa-sign-in bigfonts" style="color:#FFFFFF"></i>&nbsp;<span style="color: #FFFFFF">个人文献管理系统</span> </h2>
+								
+							</div>
+								
+							<div class="card-body p-5">
+										<h4 class="text-dark mb-5">修改密码</h4>
+										<form id="registerFrom"  data-parsley-validate novalidate>
+                                                   <div class="form-group">
+                                                        <label for="loginPhone">账号<span class="text-danger">*</span></label>
+                                                        <input type="text"  data-parsley-trigger="change" placeholder="当前仅支持手机号登陆" onblur="checkMobile()"
+                                                               class="form-control" name="loginPhone" id="loginPhone">
+                                                    </div>
+                                            <div class="form-group">
+
+                                                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+
+                                                    <input type="text" class="form-control" id="verification" name="verification"
+                                                           onblur="checkCode()" placeholder="请输入手机验证码">
+
+
+                                                    <a role="button" onclick="sendCode();" class="btn btn-success">发送验证码<span class="btn-label btn-label-right  btn-sm">
+                                                     		<i class="fa fa-arrow-right"></i></span></a>
+
+                                                </div>
+                                            </div>
+                                                    <div class="form-group">
+                                                        <label for="pwd">密码<span class="text-danger">*</span><small id="passwordHelpBlock" class="form-text text-muted" > 密码需8-20个字符</small></label>
+                                                        <input type="password" placeholder="" class="form-control" onblur="checkPwd()" id="pwd" name="pwd">
+
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="pwd2">确认密码<span class="text-danger">*</span></label>
+                                                        <input data-parsley-equalto="#pwd" type="password" placeholder="请再次输入密码" onblur="checkPwdCom()"
+                                                               class="form-control" id="pwd2" name="pwd2">
+                                                    </div>
+                                                    <div class="form-group text-right m-b-0">
+                                                        <button class="btn btn-primary" type="button" onclick="update();">
+                                                            提交
+                                                        </button>
+                                                       
+                                                    </div>
+
+                                        </form>
+										
+							</div>														
+						</div><!-- end card-->					
+                    </div>
+	</div>
+</div>
+<!-- END main -->
+
+<script src="assets/js/modernizr.min.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/moment.min.js"></script>
+
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<script src="assets/js/detect.js"></script>
+<script src="assets/js/fastclick.js"></script>
+<script src="assets/js/jquery.blockUI.js"></script>
+<script src="assets/js/jquery.nicescroll.js"></script>
+<script src="assets/js/jquery.scrollTo.min.js"></script>
+<script src="assets/plugins/switchery/switchery.min.js"></script>
+
+<!-- App js -->
+<script src="assets/js/pikeadmin.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<!-- BEGIN Java Script for this page -->
+<script>
+    function update() {
+
+        checkMobile();
+        checkPwd();
+        checkCode();
+        //提交到后台
+        var phone=document.getElementById("loginPhone").value;
+        var pwd =document.getElementById("pwd").value;
+
+        $.ajax({
+            url:"user/updatepwd",
+            //contentType:"application/json;charset=UTF-8",
+            //注意data的格式
+            data:{
+                'pwd':pwd,
+                'loginPhone':phone
+            },
+            dataType:"json",
+            type:"post",
+            success:function(result){
+                //登陆成功跳转
+                if(result.msg=="success"){
+                    window.location.href="login.html";
+                }
+                else{
+                    swal("用户名或密码错误");
+                }
+            },
+            error:function (result) {
+                swal("系统错误");
+            }
+        });
+    }
+    
+    function sendCode() {
+        //先获取手机号
+        var phone=document.getElementById("loginPhone").value;
+        //再弹窗
+        swal("已经将验证码发送至"+phone);
+    }
+
+
+    function checkMobile(){
+        var sMobile =document.getElementById("loginPhone").value;
+        if(!(/^1[3|4|5|8|7][0-9]\d{4,8}$/.test(sMobile))){
+            swal("请检查手机号码是否正确");
+            return ;
+        }
+    }
+
+    function checkPwdCom() {
+        //检查两次输入的密码是否一致
+        var pwd=document.getElementById("pwd").value;
+        var pwd2=document.getElementById("pwd2").value;
+        if(pwd!=pwd2){
+            swal("两次密码输入不一致");
+            return ;
+        }
+    }
+
+
+    function checkPwd() {
+        var pwd=document.getElementById("pwd").value;
+        var pwdRegex = new RegExp('(?=.*[0-9])(?=.*[a-zA-Z]).{8,30}');
+        if (!pwdRegex.test(pwd)) {
+            swal("\"您的密码复杂度太低（密码中必须包含字母、数字），请及时修改密码！\"");
+            return;
+        }
+    }
+   function checkCode() {
+       var code=document.getElementById("verification").value;
+       if("1111"!=code){
+           swal("验证码不正确");
+           return;
+       }
+   }
+</script>
+<!-- END Java Script for this page -->
+
+</body>
+</html>
